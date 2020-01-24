@@ -1,1 +1,59 @@
-# data-projects-template
+Cookiecutter Data Project Teamplate
+==============================
+
+This template creates a custom repository structure for all your data projects. It is released under the MIT license so feel free to use it for all yours projects.
+
+A few choices have been made regarding its content:
+* The [pipenv](https://pipenv.readthedocs.io/en/latest/) library for Python dependencies management is used by default. One could easily replace it with other choices like Poetry.
+* To check the quality of our code follows pep8 standards, we use [flake8](https://pypi.org/project/flake8/).
+* We use a [Makefile](https://en.wikipedia.org/wiki/Makefile) to run recurring commands (linter, requirements). More can be added once installed.
+
+
+### Prerequisites
+------------
+  - [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html)
+  ```bash
+  $ pip install cookiecutter
+  ```
+
+
+### Install the structure in a new empty project folder
+------------
+```bash
+$ cookiecutter https://github.com/GuillaumeLegoy/data-projects-template.git
+```
+
+
+### Once inside your project, run the following to install dependencies (only flake8 by default):
+------------
+```bash
+$ make requirements
+```
+
+
+### To make sure your code follows pep8 standards run the following inside your project:
+------------
+```bash
+$ make lint
+```
+
+
+### Directory structure
+------------
+```
+├── /src                <- Source code for use in this project.
+│   └── __init__.py     <- Makes src a Python module
+│
+├── /test
+│
+├── Makefile           <- Makefile with commands like `make data` or `make train`
+├── README.md          <- The top-level README for developers using this project.
+│
+├── .flake8            <- Flake8 linter parameters
+├── .gitignore         <- Gitignore for Python projects
+├── Makefile           <- Makefile including 3 commands: `requirements`, `lint`.
+├── Pipfile            
+├── Pipfile.lock       <- The requirements files for reproducing the analysis environment
+├── README.md
+└── setup.py           <- Setup file to package your library or application.
+```
