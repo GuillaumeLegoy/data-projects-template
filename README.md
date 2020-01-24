@@ -1,5 +1,8 @@
-Cookiecutter Data Project Teamplate
+Cookiecutter Data Project Repositories Structure Template
 ==============================
+[cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html) is a 'logical, reasonably standardized, but flexible project structure for doing and sharing data science work.'
+It helps with projects reproducibility, code quality and collaboration within data science teams. This fork of the main structure is a barebone structure that can be further customized to answer not only data science
+needs but also analytics engineering or even ad-hoc analysis projects as well.
 
 This template creates a custom repository structure for all your data projects. It is released under the MIT license so feel free to use it for all yours projects.
 
