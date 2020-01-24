@@ -1,14 +1,14 @@
 Cookiecutter Data Project Repositories Structure Template
 ==============================
-[cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html) is a 'logical, reasonably standardized, but flexible project structure for doing and sharing data science work.'
+[cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html) is a _'logical, reasonably standardized, but flexible project structure for doing and sharing data science work.'_
 It helps with projects reproducibility, code quality and collaboration within data science teams. This fork of the main structure is a barebone structure that can be further customized to answer not only data science
 needs but also analytics engineering or even ad-hoc analysis projects as well.
 
-This template creates a custom repository structure for all your data projects. It is released under the MIT license so feel free to use it for all yours projects.
+This custom template is released under the MIT license so feel free to use it for all yours projects.
 
 A few choices have been made regarding its content:
-* The [pipenv](https://pipenv.readthedocs.io/en/latest/) library for Python dependencies management is used by default. One could easily replace it with other choices like Poetry.
-* To check the quality of our code follows pep8 standards, we use [flake8](https://pypi.org/project/flake8/).
+* The [pipenv](https://pipenv.readthedocs.io/en/latest/) library for Python dependencies management is used by default.
+* To check the quality of our code follows PEP8 standards, we use [flake8](https://pypi.org/project/flake8/).
 * We use a [Makefile](https://en.wikipedia.org/wiki/Makefile) to run recurring commands (linter, requirements). More can be added once installed.
 
 
@@ -27,7 +27,7 @@ $ cookiecutter https://github.com/GuillaumeLegoy/data-projects-template.git
 ```
 
 
-### Once inside your project, run the following to install dependencies (only flake8 by default):
+### Once inside your project, run the following to install dev dependencies:
 ------------
 ```bash
 $ make requirements
@@ -38,6 +38,12 @@ $ make requirements
 ------------
 ```bash
 $ make lint
+```
+
+### If you are developing a Python library, sync your Pipfile Python libraries with setup.py:
+------------
+```bash
+$ make setup
 ```
 
 
